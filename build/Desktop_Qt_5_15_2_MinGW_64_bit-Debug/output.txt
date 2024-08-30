@@ -1,0 +1,302 @@
+HEAD55AA4003XXXX000000000002{
+    "current_time": "2024-08-30 10:12:51",
+    "racks": [
+        {
+            "leakage": [
+                {
+                    "floor": 1,
+                    "status": "ON"
+                },
+                {
+                    "floor": 2,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 3,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 4,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 5,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 6,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 7,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 8,
+                    "status": "OFF"
+                }
+            ],
+            "nodes": [
+                {
+                    "ac_A": 0,
+                    "ac_V": 0,
+                    "ac_W": 0,
+                    "age_time": 0,
+                    "aging_start_time": "2024-06-19 20:58:52",
+                    "dc_A": 0,
+                    "dc_V": 0,
+                    "dc_W": 0,
+                    "mi_cid": "A0158266",
+                    "pos": "1-1"
+                },
+                {
+                    "ac_A": 0,
+                    "ac_V": 0,
+                    "ac_W": 0,
+                    "age_time": 0,
+                    "aging_start_time": "2024-06-19 20:58:52",
+                    "dc_A": 0,
+                    "dc_V": 0,
+                    "dc_W": 0,
+                    "mi_cid": "A0158266",
+                    "pos": "1-2"
+                },
+                {
+                    "ac_A": 0,
+                    "ac_V": 0,
+                    "ac_W": 0,
+                    "age_time": 0,
+                    "aging_start_time": "2024-06-19 20:58:52",
+                    "dc_A": 0,
+                    "dc_V": 0,
+                    "dc_W": 0,
+                    "mi_cid": "A0158266",
+                    "pos": "1-3"
+                },
+                {
+                    "ac_A": 0,
+                    "ac_V": 0,
+                    "ac_W": 0,
+                    "age_time": 0,
+                    "aging_start_time": "2024-06-19 20:58:52",
+                    "dc_A": 0,
+                    "dc_V": 0,
+                    "dc_W": 0,
+                    "mi_cid": "A0158266",
+                    "pos": "1-4"
+                },
+                {
+                    "ac_A": 0,
+                    "ac_V": 0,
+                    "ac_W": 0,
+                    "age_time": 0,
+                    "aging_start_time": "2024-06-19 20:58:52",
+                    "dc_A": 0,
+                    "dc_V": 0,
+                    "dc_W": 0,
+                    "mi_cid": "A0158266",
+                    "pos": "1-5"
+                },
+                {
+                    "ac_A": 0,
+                    "ac_V": 0,
+                    "ac_W": 0,
+                    "age_time": 0,
+                    "aging_start_time": "2024-06-19 20:58:52",
+                    "dc_A": 0,
+                    "dc_V": 0,
+                    "dc_W": 0,
+                    "mi_cid": "A0158266",
+                    "pos": "1-6"
+                }
+            ],
+            "rack_id": "rack-1"
+        },
+        {
+            "leakage": [
+                {
+                    "floor": 1,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 2,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 3,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 4,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 5,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 6,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 7,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 8,
+                    "status": "OFF"
+                }
+            ],
+            "rack_id": "rack-2"
+        },
+        {
+            "leakage": [
+                {
+                    "floor": 1,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 2,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 3,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 4,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 5,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 6,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 7,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 8,
+                    "status": "OFF"
+                }
+            ],
+            "rack_id": "rack-3"
+        },
+        {
+            "leakage": [
+                {
+                    "floor": 1,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 2,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 3,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 4,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 5,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 6,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 7,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 8,
+                    "status": "OFF"
+                }
+            ],
+            "rack_id": "rack-4"
+        },
+        {
+            "leakage": [
+                {
+                    "floor": 1,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 2,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 3,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 4,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 5,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 6,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 7,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 8,
+                    "status": "OFF"
+                }
+            ],
+            "rack_id": "rack-5"
+        },
+        {
+            "leakage": [
+                {
+                    "floor": 1,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 2,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 3,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 4,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 5,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 6,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 7,
+                    "status": "OFF"
+                },
+                {
+                    "floor": 8,
+                    "status": "OFF"
+                }
+            ],
+            "rack_id": "rack-6"
+        }
+    ],
+    "room_id": "room-1"
+}
