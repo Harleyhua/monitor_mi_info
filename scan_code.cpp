@@ -6,6 +6,7 @@
 #include <QJsonArray>
 #include <QFile>
 #include <QRegularExpression>
+#include <QMessageBox>
 
 
 #define CS_ROOM_RACK_REQUEST    "40032"
@@ -46,16 +47,16 @@ void scan_code::onScanFinished()
     QString scannedID = ui->ScanIDEdit->text();
     onScanIDTextEdited();
 
-    QString Mi_id = ui->ProductEdit->text();
-    addScanResultToTable(Mi_id);
+    // QString Mi_id = ui->ProductEdit->text();
+    // addScanResultToTable(Mi_id);
 }
 
-//判断是位置还是编号
+//判断是位置还是编号,并按位置分配编号
 void scan_code::onScanIDTextEdited()
 {
     QString text = ui->ScanIDEdit->text();
-    QString position;
-    QString mi_cid;
+    // QString position;
+    // QString mi_cid;
     QList<QTableWidget*> tableWidgets;
     tableWidgets.append(ui->tableWidget1);
     tableWidgets.append(ui->tableWidget2);
@@ -67,7 +68,7 @@ void scan_code::onScanIDTextEdited()
     if (text.startsWith("BTSC"))
     {
         ui->PosEdit->setText(text);
-        position = text;
+        Position = text;
     }
     else if (text.startsWith("A") || text.startsWith("B") || text.startsWith("C"))
     {
@@ -76,25 +77,37 @@ void scan_code::onScanIDTextEdited()
         if (match.hasMatch())
         {
             ui->ProductEdit->setText(text);
-            mi_cid = text;
-        }
-    }
+            MiCid = text;
 
-    for (QTableWidget *tableWidget : tableWidgets)
-    {
-        if (!position.isEmpty())
-        {
-            QStringList positionParts = position.split("-");
-            if (positionParts.length() >= 4)
+
+            for (QTableWidget *tableWidget : tableWidgets)
             {
-                int rackIndex = positionParts[1].toInt(); // 架位索引，可能需要转换或特定映射
-                int rowIndex = positionParts[2].toInt(); // 行索引
-                int columnIndex = positionParts[3].toInt(); // 列索引
-
-                int index = tableWidgets.indexOf(tableWidget) + 1;
-                if(index == rackIndex)
+                if (!Position.isEmpty())
                 {
+                    QStringList positionParts = Position.split("-");
+                    if (positionParts.length() >= 4)
+                    {
+                        int rackIndex = positionParts[1].toInt(); // 架位索引
+                        int rowIndex = positionParts[2].toInt(); // 行索引
+                        int columnIndex = positionParts[3].toInt(); // 列索引
 
+                        QString objectName = tableWidget->objectName(); // 获取对象名称
+                        QString lastPart = objectName.mid(10);
+                        QString singleChar = objectName.right(1);
+                        int index = singleChar.toInt();
+
+                        if(index == rackIndex)
+                        {
+                            Position.clear();
+
+                            QTableWidgetItem *newItem = new QTableWidgetItem(MiCid);
+                            if (rowIndex >= 0 && rowIndex < tableWidget->rowCount() &&
+                                columnIndex >= 0 && columnIndex < tableWidget->columnCount())
+                            {
+                                tableWidget->setItem(rowIndex -1, columnIndex -1, newItem);
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -104,35 +117,35 @@ void scan_code::onScanIDTextEdited()
 }
 
 //添加到表格中
-void scan_code::addScanResultToTable(const QString &result)
-{
-    static int currentRow = 0;
-    if (currentRow >= ui->tableWidget1->rowCount())
-    {
-        currentRow = 0;
-    }
+// void scan_code::addScanResultToTable(const QString &result)
+// {
+//     static int currentRow = 0;
+//     if (currentRow >= ui->tableWidget1->rowCount())
+//     {
+//         currentRow = 0;
+//     }
 
-    // 确保currentRow不会超过表格的行数
-    int currentColumn = ui->tableWidget1->columnCount() - 1;
-    for (int i = 0; i < currentColumn; ++i)
-    {
-        if (ui->tableWidget1->item(currentRow, i) == nullptr ||
-            ui->tableWidget1->item(currentRow, i)->text().isEmpty())
-        {
-            currentColumn = i;
-            break;
-        }
-    }
+//     // 确保currentRow不会超过表格的行数
+//     int currentColumn = ui->tableWidget1->columnCount() - 1;
+//     for (int i = 0; i < currentColumn; ++i)
+//     {
+//         if (ui->tableWidget1->item(currentRow, i) == nullptr ||
+//             ui->tableWidget1->item(currentRow, i)->text().isEmpty())
+//         {
+//             currentColumn = i;
+//             break;
+//         }
+//     }
 
-    //找到当前行的第一个空单元格
-    QTableWidgetItem *newItem = new QTableWidgetItem(result);
-    ui->tableWidget1->setItem(currentRow, currentColumn, newItem);
-    ++currentColumn;
-    if (currentColumn >= ui->tableWidget1->columnCount())
-    {
-        ++currentRow;
-    }
-}
+//     //找到当前行的第一个空单元格
+//     QTableWidgetItem *newItem = new QTableWidgetItem(result);
+//     ui->tableWidget1->setItem(currentRow, currentColumn, newItem);
+//     ++currentColumn;
+//     if (currentColumn >= ui->tableWidget1->columnCount())
+//     {
+//         ++currentRow;
+//     }
+// }
 
 //停止扫码
 void scan_code::on_Stop_Scan_clicked()
@@ -154,10 +167,11 @@ void scan_code::create_room_temp_js(room_strc status)
     tableWidgets.append(ui->tableWidget5);
     tableWidgets.append(ui->tableWidget6);
 
+    QString room_id = ui->Room_Box->currentText();
     QString age_time = ui->agetime_Edit->text();
     int age = age_time.toInt();
 
-    root_js["room_id"] = "room-1";
+    root_js["room_id"] = room_id;
     root_js["current_time"] = QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss");
 
     for (QTableWidget *tableWidget : tableWidgets)

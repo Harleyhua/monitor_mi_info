@@ -63,15 +63,18 @@ void Up_load::openFile()
         {
             QString fileContent = file.readAll();
             file.close();
+            msg == fileContent;
 
             ui->Show_Edit->setText(fileContent);
+
         }
     }
 }
 
 void Up_load::on_Start_btn_clicked()
 {
-    QByteArray msg;
-    //emit s_send_cs_msg(msg);
+    //QByteArray msg;
+
+    emit s_send_cs_msg(18000,"/newroomdevdata",msg);
 }
 

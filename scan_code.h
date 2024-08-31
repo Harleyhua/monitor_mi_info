@@ -25,6 +25,9 @@ public:
     explicit scan_code(QWidget *parent = nullptr);
     ~scan_code();
 
+    QString Position;
+    QString MiCid;
+
 private slots:
     void onStartScanClicked();
 
@@ -32,7 +35,7 @@ private slots:
 
     void onScanIDTextEdited();
 
-    void addScanResultToTable(const QString &result);
+    //void addScanResultToTable(const QString &result);
 
     bool saveJSONToFile(const QByteArray &jsonData, const QString &fileName);
 
