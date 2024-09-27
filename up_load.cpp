@@ -5,6 +5,11 @@
 #include <QFileDialog>
 #include <QJsonDocument>
 #include <QJsonArray>
+#include <QNetworkRequest>
+#include <QUrlQuery>
+#include <QMessageBox>
+
+
 
 Up_load::Up_load(QWidget *parent)
     : QWidget(parent)
@@ -20,6 +25,11 @@ Up_load::Up_load(QWidget *parent)
 
     //按键打开文件
     connect(ui->Load_btn, &QPushButton::clicked, this, &Up_load::openFile);
+    connect(client, &QTcpSocket::readyRead, this, &Up_load::onDataReceived);
+
+    connectionChecker.setInterval(reconnectInterval);
+    connectionChecker.setSingleShot(false);
+    connect(&connectionChecker, &QTimer::timeout, this, &Up_load::checkConnection);
 
 }
 
@@ -63,18 +73,52 @@ void Up_load::openFile()
         {
             QString fileContent = file.readAll();
             file.close();
-            msg == fileContent;
-
             ui->Show_Edit->setText(fileContent);
-
         }
     }
 }
 
 void Up_load::on_Start_btn_clicked()
 {
-    //QByteArray msg;
-
-    emit s_send_cs_msg(18000,"/newroomdevdata",msg);
+    QString msg = ui->Show_Edit->toPlainText();
+    QByteArray msg_2 = msg.toUtf8();
+    client->write(msg_2);
 }
 
+void Up_load::onm_timer_callback()
+{
+    static uint32_t t1 = 0;
+    t1 ++;
+    if(t1 >= 4)
+    {
+        //两间房
+        //col_room_temp();
+        t1 = 0;
+    }
+}
+
+void Up_load::onm_new_timer()
+{
+    m_timer = new QTimer();
+    connect(m_timer,&QTimer::timeout,this,&Up_load::onm_timer_callback);
+    m_timer->start(15000);
+}
+
+void Up_load::onDataReceived()
+{
+    QByteArray data = client->readAll();
+    ui->reply_Edit->setText(data);
+
+}
+
+void Up_load::checkConnection()
+{
+    if (client->state() != QAbstractSocket::ConnectedState)
+    {
+        ui->IP_Edit->setEnabled(true);
+        ui->Port_Edit->setEnabled(true);
+        ui->Start_btn->setEnabled(true);
+        QMessageBox::information(this,"提示","未连接，尝试重新连接!");
+        client->connectToHost(ui->IP_Edit->text(),ui->Port_Edit->text().toInt());
+    }
+}

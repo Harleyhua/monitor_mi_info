@@ -6,6 +6,8 @@
 #include <QVBoxLayout>
 #include <QHeaderView>
 #include <QtNetwork/QTcpSocket>
+#include "up_load.h"
+#include <QThread>
 
 
 QT_BEGIN_NAMESPACE
@@ -21,7 +23,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    //cm_mg *m_cm_mg;
+    Up_load *up_load;
+    QThread m_thread;
 
 signals:
     void s_cm_start();

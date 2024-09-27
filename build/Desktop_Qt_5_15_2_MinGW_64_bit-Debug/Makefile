@@ -243,8 +243,8 @@ Makefile: ../../monitor_mi_info.pro D:/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qm
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_windowsuiautomation_support_private.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_winextras.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_winextras_private.pri \
-		../../../QtXlsxWriter-master/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/mkspecs/modules-inst/qt_lib_xlsx.pri \
-		../../../QtXlsxWriter-master/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/mkspecs/modules-inst/qt_lib_xlsx_private.pri \
+		../../../../My_project/QtXlsxWriter-master/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/mkspecs/modules-inst/qt_lib_xlsx.pri \
+		../../../../My_project/QtXlsxWriter-master/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/mkspecs/modules-inst/qt_lib_xlsx_private.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_xlsx.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_xml.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_xml_private.pri \
@@ -260,6 +260,7 @@ Makefile: ../../monitor_mi_info.pro D:/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qm
 		D:/Qt/5.15.2/mingw81_64/mkspecs/features/toolchain.prf \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/features/default_pre.prf \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/features/win32/default_pre.prf \
+		../../communication/communication.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/features/resolve_config.prf \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds_post.prf \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/features/default_post.prf \
@@ -460,8 +461,8 @@ D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_widgets_private.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_windowsuiautomation_support_private.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_winextras.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_winextras_private.pri:
-../../../QtXlsxWriter-master/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/mkspecs/modules-inst/qt_lib_xlsx.pri:
-../../../QtXlsxWriter-master/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/mkspecs/modules-inst/qt_lib_xlsx_private.pri:
+../../../../My_project/QtXlsxWriter-master/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/mkspecs/modules-inst/qt_lib_xlsx.pri:
+../../../../My_project/QtXlsxWriter-master/build/Desktop_Qt_5_15_2_MinGW_64_bit-Debug/mkspecs/modules-inst/qt_lib_xlsx_private.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_xlsx.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_xml.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_xml_private.pri:
@@ -477,6 +478,7 @@ D:/Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds.prf:
 D:/Qt/5.15.2/mingw81_64/mkspecs/features/toolchain.prf:
 D:/Qt/5.15.2/mingw81_64/mkspecs/features/default_pre.prf:
 D:/Qt/5.15.2/mingw81_64/mkspecs/features/win32/default_pre.prf:
+../../communication/communication.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/features/resolve_config.prf:
 D:/Qt/5.15.2/mingw81_64/mkspecs/features/exclusive_builds_post.prf:
 D:/Qt/5.15.2/mingw81_64/mkspecs/features/default_post.prf:

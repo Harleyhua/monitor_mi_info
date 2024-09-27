@@ -1,6 +1,6 @@
 #include <windows.h>
 
-IDI_ICON1	ICON	DISCARDABLE	"E:\\My_project\\monitor_mi_info\\1.ico"
+IDI_ICON1	ICON	DISCARDABLE	"E:\\git\\monitor_mi_info\\1.ico"
 
 VS_VERSION_INFO VERSIONINFO
 	FILEVERSION 0,1,0,1

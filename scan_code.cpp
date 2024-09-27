@@ -9,7 +9,7 @@
 #include <QMessageBox>
 
 
-#define CS_ROOM_RACK_REQUEST    "40032"
+#define CS_ROOM_RACK_REQUEST    "1006"
 #define CS_DEFAULT_HEARD        "HEAD55AA"
 
 
@@ -46,9 +46,6 @@ void scan_code::onScanFinished()
 {
     QString scannedID = ui->ScanIDEdit->text();
     onScanIDTextEdited();
-
-    // QString Mi_id = ui->ProductEdit->text();
-    // addScanResultToTable(Mi_id);
 }
 
 //判断是位置还是编号,并按位置分配编号
@@ -116,37 +113,6 @@ void scan_code::onScanIDTextEdited()
     ui->ScanIDEdit->clear();
 }
 
-//添加到表格中
-// void scan_code::addScanResultToTable(const QString &result)
-// {
-//     static int currentRow = 0;
-//     if (currentRow >= ui->tableWidget1->rowCount())
-//     {
-//         currentRow = 0;
-//     }
-
-//     // 确保currentRow不会超过表格的行数
-//     int currentColumn = ui->tableWidget1->columnCount() - 1;
-//     for (int i = 0; i < currentColumn; ++i)
-//     {
-//         if (ui->tableWidget1->item(currentRow, i) == nullptr ||
-//             ui->tableWidget1->item(currentRow, i)->text().isEmpty())
-//         {
-//             currentColumn = i;
-//             break;
-//         }
-//     }
-
-//     //找到当前行的第一个空单元格
-//     QTableWidgetItem *newItem = new QTableWidgetItem(result);
-//     ui->tableWidget1->setItem(currentRow, currentColumn, newItem);
-//     ++currentColumn;
-//     if (currentColumn >= ui->tableWidget1->columnCount())
-//     {
-//         ++currentRow;
-//     }
-// }
-
 //停止扫码
 void scan_code::on_Stop_Scan_clicked()
 {
@@ -180,15 +146,6 @@ void scan_code::create_room_temp_js(room_strc status)
         {
             QJsonObject rackObj;
             rackObj["rack_id"] = QString("rack-%1").arg(tableWidgets.indexOf(tableWidget) + 1);
-
-        // QTableWidgetItem *item_2 = tableWidget->item(0, 0);
-        // if (item_2 && !item_2->text().isEmpty())
-        // {
-            // 第一个rack
-            // for (int rackIndex = 0; rackIndex < 6; ++rackIndex)
-            // {
-                //QJsonObject rackObj;
-                //rackObj["rack_id"] = QString("rack-%1").arg(rackIndex + 1);
 
             // 创建leakage数组
             QJsonArray leakageArray;
@@ -278,16 +235,12 @@ void scan_code::send_cs_msg(QJsonObject &root_js, QString cmd)
     QString fileName = "output.txt";
     if (saveJSONToFile(msg, fileName))
     {
-        QMessageBox::information(this, "保存成功", "JSON 数据保存成功！");
+        QMessageBox::information(this, "保存成功", "JSON 数据保存至output.txt！");
     }
     else
     {
         QMessageBox::critical(this, "保存失败", "JSON 数据保存失败！");
     }
-
-    //QLOG_INFO() << "发送--->" + QString(msg);
-    //emit s_send_cs_msg(msg);
-    // 将 QJsonObject 转换为 QJsonDocument
 }
 
 void scan_code::cs_communicate_encode(QByteArray &buffer, QString cmd, QString status)
@@ -295,8 +248,8 @@ void scan_code::cs_communicate_encode(QByteArray &buffer, QString cmd, QString s
     int length = buffer.size();
     buffer.insert(0,CS_DEFAULT_HEARD);
     buffer.insert(8,cmd.toUtf8());
-    buffer.insert(13,status.toUtf8());
-    buffer.insert(17,QString("%1").arg(length,11,10,QLatin1Char('0')).toUtf8());
+    buffer.insert(12,status.toUtf8());
+    buffer.insert(16,QString("%1").arg(length,11,10,QLatin1Char('0')).toUtf8());
 }
 
 

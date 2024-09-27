@@ -30,6 +30,10 @@ public:
     QLabel *label_20;
     QPushButton *Load_btn;
     QTextEdit *Show_Edit;
+    QLabel *label_25;
+    QLineEdit *reply_Edit_2;
+    QLabel *label_26;
+    QTextEdit *reply_Edit;
 
     void setupUi(QWidget *Up_load)
     {
@@ -78,6 +82,21 @@ public:
         QFont font2;
         font2.setFamily(QString::fromUtf8("\345\256\213\344\275\223"));
         Show_Edit->setFont(font2);
+        label_25 = new QLabel(Up_load);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+        label_25->setGeometry(QRect(770, 30, 121, 19));
+        label_25->setFont(font1);
+        reply_Edit_2 = new QLineEdit(Up_load);
+        reply_Edit_2->setObjectName(QString::fromUtf8("reply_Edit_2"));
+        reply_Edit_2->setGeometry(QRect(770, 165, 171, 61));
+        reply_Edit_2->setFont(font);
+        label_26 = new QLabel(Up_load);
+        label_26->setObjectName(QString::fromUtf8("label_26"));
+        label_26->setGeometry(QRect(770, 140, 121, 19));
+        label_26->setFont(font1);
+        reply_Edit = new QTextEdit(Up_load);
+        reply_Edit->setObjectName(QString::fromUtf8("reply_Edit"));
+        reply_Edit->setGeometry(QRect(770, 60, 171, 71));
 
         retranslateUi(Up_load);
 
@@ -92,6 +111,8 @@ public:
         Start_btn->setText(QCoreApplication::translate("Up_load", "\345\220\257\345\212\250", nullptr));
         label_20->setText(QCoreApplication::translate("Up_load", "IP\345\234\260\345\235\200\357\274\232", nullptr));
         Load_btn->setText(QCoreApplication::translate("Up_load", "\345\212\240\350\275\275", nullptr));
+        label_25->setText(QCoreApplication::translate("Up_load", "MES\345\233\236\344\274\240\344\277\241\346\201\257\357\274\232", nullptr));
+        label_26->setText(QCoreApplication::translate("Up_load", "MES\345\233\236\344\274\240\350\256\241\346\227\266\357\274\232", nullptr));
     } // retranslateUi
 
 };

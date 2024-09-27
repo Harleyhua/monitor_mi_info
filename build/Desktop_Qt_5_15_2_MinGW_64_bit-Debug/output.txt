@@ -1,11 +1,11 @@
-HEAD55AA40032XXXX00000006116{
-    "current_time": "2024-08-30 20:07:42",
+HEAD55AA1006XXXX00000006116{
+    "current_time": "2024-09-26 16:20:18",
     "racks": [
         {
             "leakage": [
                 {
                     "floor": 1,
-                    "status": "OFF"
+                    "status": "ON"
                 },
                 {
                     "floor": 2,
@@ -17,7 +17,7 @@ HEAD55AA40032XXXX00000006116{
                 },
                 {
                     "floor": 4,
-                    "status": "ON"
+                    "status": "OFF"
                 },
                 {
                     "floor": 5,
@@ -47,7 +47,7 @@ HEAD55AA40032XXXX00000006116{
                     "dc_V": 0,
                     "dc_W": 0,
                     "mi_cid": "A0158266",
-                    "pos": "4-1"
+                    "pos": "1-1"
                 }
             ],
             "rack_id": "rack-1"
@@ -238,5 +238,5 @@ HEAD55AA40032XXXX00000006116{
             "rack_id": "rack-6"
         }
     ],
-    "room_id": "room-2"
+    "room_id": "room-1"
 }

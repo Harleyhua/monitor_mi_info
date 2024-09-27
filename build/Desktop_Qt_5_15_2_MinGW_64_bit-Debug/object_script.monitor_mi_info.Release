@@ -1,0 +1,11 @@
+release/tcp_socket.o
+release/common.o
+release/main.o
+release/mainwindow.o
+release/scan_code.o
+release/up_load.o
+release/moc_tcp_socket.o
+release/moc_common.o
+release/moc_mainwindow.o
+release/moc_scan_code.o
+release/moc_up_load.o

@@ -1,0 +1,11 @@
+debug/tcp_socket.o
+debug/common.o
+debug/main.o
+debug/mainwindow.o
+debug/scan_code.o
+debug/up_load.o
+debug/moc_tcp_socket.o
+debug/moc_common.o
+debug/moc_mainwindow.o
+debug/moc_scan_code.o
+debug/moc_up_load.o
