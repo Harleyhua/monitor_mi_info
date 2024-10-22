@@ -1,5 +1,4 @@
-{
-    "current_time": "2024-08-29 19:15:29",
+HEAD55AA1006XXXX00000006074{
     "racks": [
         {
             "leakage": [
@@ -9,7 +8,7 @@
                 },
                 {
                     "floor": 2,
-                    "status": "ON"
+                    "status": "OFF"
                 },
                 {
                     "floor": 3,
@@ -41,85 +40,13 @@
                     "ac_A": 0,
                     "ac_V": 0,
                     "ac_W": 0,
-                    "age_time": 0,
-                    "aging_start_time": "2024-06-19 20:58:52",
+                    "age_time": 60,
+                    "aging_start_time": "2024-10-22 13:55:01",
                     "dc_A": 0,
                     "dc_V": 0,
                     "dc_W": 0,
-                    "mi_cid": "A0158255",
+                    "mi_cid": "10010526",
                     "pos": "1-1"
-                },
-                {
-                    "ac_A": 0,
-                    "ac_V": 0,
-                    "ac_W": 0,
-                    "age_time": 0,
-                    "aging_start_time": "2024-06-19 20:58:52",
-                    "dc_A": 0,
-                    "dc_V": 0,
-                    "dc_W": 0,
-                    "mi_cid": "A0158255",
-                    "pos": "1-2"
-                },
-                {
-                    "ac_A": 0,
-                    "ac_V": 0,
-                    "ac_W": 0,
-                    "age_time": 0,
-                    "aging_start_time": "2024-06-19 20:58:52",
-                    "dc_A": 0,
-                    "dc_V": 0,
-                    "dc_W": 0,
-                    "mi_cid": "A0158255",
-                    "pos": "1-3"
-                },
-                {
-                    "ac_A": 0,
-                    "ac_V": 0,
-                    "ac_W": 0,
-                    "age_time": 0,
-                    "aging_start_time": "2024-06-19 20:58:52",
-                    "dc_A": 0,
-                    "dc_V": 0,
-                    "dc_W": 0,
-                    "mi_cid": "A0158255",
-                    "pos": "1-4"
-                },
-                {
-                    "ac_A": 0,
-                    "ac_V": 0,
-                    "ac_W": 0,
-                    "age_time": 0,
-                    "aging_start_time": "2024-06-19 20:58:52",
-                    "dc_A": 0,
-                    "dc_V": 0,
-                    "dc_W": 0,
-                    "mi_cid": "A0158255",
-                    "pos": "1-5"
-                },
-                {
-                    "ac_A": 0,
-                    "ac_V": 0,
-                    "ac_W": 0,
-                    "age_time": 0,
-                    "aging_start_time": "2024-06-19 20:58:52",
-                    "dc_A": 0,
-                    "dc_V": 0,
-                    "dc_W": 0,
-                    "mi_cid": "A0158255",
-                    "pos": "1-6"
-                },
-                {
-                    "ac_A": 0,
-                    "ac_V": 0,
-                    "ac_W": 0,
-                    "age_time": 0,
-                    "aging_start_time": "2024-06-19 20:58:52",
-                    "dc_A": 0,
-                    "dc_V": 0,
-                    "dc_W": 0,
-                    "mi_cid": "A0158255",
-                    "pos": "2-1"
                 }
             ],
             "rack_id": "rack-1"

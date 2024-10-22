@@ -7,9 +7,13 @@
 #include <QTimer>
 #include <QNetworkReply>
 #include <QJsonObject>
+#include <QLabel>
 
 
 #define LOCAL_TEST  1  // 0为正式服务器  1为本地服务器
+
+#define CS_ROOM_RACK_REQUEST    "1006"
+#define CS_DEFAULT_HEARD        "HEAD55AA"
 
 namespace Ui {
 class Up_load;
@@ -53,18 +57,25 @@ public:
 
     void checkConnection();
 
+    void updateCountdown();
+
+    void setLED(QLabel* label, int color, int size);
+
 
 private slots:
     void on_Connect_btn_clicked();
 
-    void on_Load_btn_clicked();
+    //void on_Load_btn_clicked();
+
+    //void on_Start_btn_clicked();
+
+    //void onm_timer_callback();
+
+    void sent_msg();
 
     void on_Start_btn_clicked();
 
-    void onm_timer_callback();
-
-public slots:
-    void onm_new_timer();
+    //void onm_new_timer();
 
 signals:
     void s_send_cs_msg(quint32 timeout, QString path, QByteArray msg);
@@ -76,6 +87,9 @@ private:
     QTextEdit *textEdit;
 
     QTimer connectionChecker;
+    QTimer *sent_timer;
+    QTimer *Hit_timer;
+    int elapsedTime;
     const int reconnectInterval = 5000; // 5 seconds
 };
 

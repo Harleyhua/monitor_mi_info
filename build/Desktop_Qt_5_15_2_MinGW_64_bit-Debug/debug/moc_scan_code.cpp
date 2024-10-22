@@ -22,8 +22,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_scan_code_t {
-    QByteArrayData data[20];
-    char stringdata0[252];
+    QByteArrayData data[25];
+    char stringdata0[317];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -51,7 +51,12 @@ QT_MOC_LITERAL(15, 171, 21), // "cs_communicate_encode"
 QT_MOC_LITERAL(16, 193, 11), // "QByteArray&"
 QT_MOC_LITERAL(17, 205, 6), // "buffer"
 QT_MOC_LITERAL(18, 212, 18), // "on_Savebtn_clicked"
-QT_MOC_LITERAL(19, 231, 20) // "on_Stop_Scan_clicked"
+QT_MOC_LITERAL(19, 231, 20), // "on_Stop_Scan_clicked"
+QT_MOC_LITERAL(20, 252, 15), // "showContextMenu"
+QT_MOC_LITERAL(21, 268, 3), // "pos"
+QT_MOC_LITERAL(22, 272, 18), // "deleteSelectedRows"
+QT_MOC_LITERAL(23, 291, 13), // "QTableWidget*"
+QT_MOC_LITERAL(24, 305, 11) // "tableWidget"
 
     },
     "scan_code\0onStartScanClicked\0\0"
@@ -61,7 +66,9 @@ QT_MOC_LITERAL(19, 231, 20) // "on_Stop_Scan_clicked"
     "send_cs_msg\0QJsonObject&\0root_js\0cmd\0"
     "cs_communicate_encode\0QByteArray&\0"
     "buffer\0on_Savebtn_clicked\0"
-    "on_Stop_Scan_clicked"
+    "on_Stop_Scan_clicked\0showContextMenu\0"
+    "pos\0deleteSelectedRows\0QTableWidget*\0"
+    "tableWidget"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,7 +78,7 @@ static const uint qt_meta_data_scan_code[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       9,   14, // methods
+      11,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,15 +86,17 @@ static const uint qt_meta_data_scan_code[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   59,    2, 0x08 /* Private */,
-       3,    0,   60,    2, 0x08 /* Private */,
-       4,    0,   61,    2, 0x08 /* Private */,
-       5,    2,   62,    2, 0x08 /* Private */,
-       8,    1,   67,    2, 0x08 /* Private */,
-      11,    2,   70,    2, 0x08 /* Private */,
-      15,    3,   75,    2, 0x08 /* Private */,
-      18,    0,   82,    2, 0x08 /* Private */,
-      19,    0,   83,    2, 0x08 /* Private */,
+       1,    0,   69,    2, 0x08 /* Private */,
+       3,    0,   70,    2, 0x08 /* Private */,
+       4,    0,   71,    2, 0x08 /* Private */,
+       5,    2,   72,    2, 0x08 /* Private */,
+       8,    1,   77,    2, 0x08 /* Private */,
+      11,    2,   80,    2, 0x08 /* Private */,
+      15,    3,   85,    2, 0x08 /* Private */,
+      18,    0,   92,    2, 0x08 /* Private */,
+      19,    0,   93,    2, 0x08 /* Private */,
+      20,    1,   94,    2, 0x08 /* Private */,
+      22,    1,   97,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -99,6 +108,8 @@ static const uint qt_meta_data_scan_code[] = {
     QMetaType::Void, 0x80000000 | 16, QMetaType::QString, QMetaType::QString,   17,   14,   10,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QPoint,   21,
+    QMetaType::Void, 0x80000000 | 23,   24,
 
        0        // eod
 };
@@ -119,7 +130,20 @@ void scan_code::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 6: _t->cs_communicate_encode((*reinterpret_cast< QByteArray(*)>(_a[1])),(*reinterpret_cast< QString(*)>(_a[2])),(*reinterpret_cast< QString(*)>(_a[3]))); break;
         case 7: _t->on_Savebtn_clicked(); break;
         case 8: _t->on_Stop_Scan_clicked(); break;
+        case 9: _t->showContextMenu((*reinterpret_cast< const QPoint(*)>(_a[1]))); break;
+        case 10: _t->deleteSelectedRows((*reinterpret_cast< QTableWidget*(*)>(_a[1]))); break;
         default: ;
+        }
+    } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+        case 10:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<int*>(_a[0]) = -1; break;
+            case 0:
+                *reinterpret_cast<int*>(_a[0]) = qRegisterMetaType< QTableWidget* >(); break;
+            }
+            break;
         }
     }
 }
@@ -153,13 +177,13 @@ int scan_code::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 9)
+        if (_id < 11)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 9;
+        _id -= 11;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 9)
-            *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 9;
+        if (_id < 11)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 11;
     }
     return _id;
 }

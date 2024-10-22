@@ -27,7 +27,8 @@ FORMS += \
     mainwindow.ui \
     scan_code.ui \
     up_load.ui
-    RC_ICONS = 1.ico
+
+RC_ICONS = scan.ico
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -36,7 +37,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 
 #程序版本
-VERSION = 0.1.0.1
+VERSION = 0.1.0.2
 
 #程序名称
 QMAKE_TARGET_PRODUCT = "monitor_mi_info"

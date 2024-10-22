@@ -73,7 +73,7 @@
    <property name="geometry">
     <rect>
      <x>1470</x>
-     <y>625</y>
+     <y>715</y>
      <width>150</width>
      <height>31</height>
     </rect>
@@ -146,24 +146,7 @@
    <property name="geometry">
     <rect>
      <x>1470</x>
-     <y>405</y>
-     <width>150</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Microsoft Tai Le</family>
-     <pointsize>12</pointsize>
-     <bold>false</bold>
-    </font>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="Temp_Edit">
-   <property name="geometry">
-    <rect>
-     <x>1470</x>
-     <y>740</y>
+     <y>485</y>
      <width>150</width>
      <height>31</height>
     </rect>
@@ -180,7 +163,7 @@
    <property name="geometry">
     <rect>
      <x>1470</x>
-     <y>300</y>
+     <y>375</y>
      <width>150</width>
      <height>31</height>
     </rect>
@@ -197,7 +180,7 @@
    <property name="geometry">
     <rect>
      <x>1480</x>
-     <y>90</y>
+     <y>130</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -325,26 +308,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QLabel" name="label_18">
-   <property name="geometry">
-    <rect>
-     <x>1470</x>
-     <y>715</y>
-     <width>105</width>
-     <height>19</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Microsoft Tai Le</family>
-     <pointsize>12</pointsize>
-     <bold>true</bold>
-    </font>
-   </property>
-   <property name="text">
-    <string>老化预热时长：</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="layoutWidget_11">
    <property name="geometry">
     <rect>
@@ -405,7 +368,7 @@
    <property name="geometry">
     <rect>
      <x>1470</x>
-     <y>275</y>
+     <y>350</y>
      <width>45</width>
      <height>19</height>
     </rect>
@@ -445,7 +408,7 @@
    <property name="geometry">
     <rect>
      <x>1470</x>
-     <y>490</y>
+     <y>575</y>
      <width>62</width>
      <height>19</height>
     </rect>
@@ -465,7 +428,7 @@
    <property name="geometry">
     <rect>
      <x>1470</x>
-     <y>515</y>
+     <y>600</y>
      <width>150</width>
      <height>31</height>
     </rect>
@@ -485,7 +448,7 @@
    <property name="geometry">
     <rect>
      <x>1480</x>
-     <y>190</y>
+     <y>250</y>
      <width>131</width>
      <height>41</height>
     </rect>
@@ -505,7 +468,7 @@
    <property name="geometry">
     <rect>
      <x>1470</x>
-     <y>600</y>
+     <y>690</y>
      <width>75</width>
      <height>19</height>
     </rect>
@@ -581,7 +544,7 @@
    <property name="geometry">
     <rect>
      <x>1470</x>
-     <y>380</y>
+     <y>460</y>
      <width>62</width>
      <height>19</height>
     </rect>
@@ -603,7 +566,7 @@
      <x>1480</x>
      <y>30</y>
      <width>131</width>
-     <height>21</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="duplicatesEnabled">

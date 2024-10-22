@@ -2,6 +2,10 @@
 #define SCAN_CODE_H
 
 #include <QWidget>
+#include <QTableWidget>
+
+#define CS_ROOM_RACK_REQUEST    "1006"
+#define CS_DEFAULT_HEARD        "HEAD55AA"
 
 typedef struct
 {
@@ -48,6 +52,10 @@ private slots:
     void on_Savebtn_clicked();
 
     void on_Stop_Scan_clicked();
+
+    void showContextMenu(const QPoint &pos);
+
+    void deleteSelectedRows(QTableWidget *tableWidget);
 
 private:
     Ui::scan_code *ui;

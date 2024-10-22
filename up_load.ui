@@ -52,7 +52,7 @@
     <rect>
      <x>30</x>
      <y>250</y>
-     <width>131</width>
+     <width>101</width>
      <height>41</height>
     </rect>
    </property>
@@ -182,7 +182,7 @@
     <string>MES回传信息：</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="reply_Edit_2">
+  <widget class="QLineEdit" name="Reply_Edit">
    <property name="geometry">
     <rect>
      <x>770</x>
@@ -216,7 +216,7 @@
     </font>
    </property>
    <property name="text">
-    <string>MES回传计时：</string>
+    <string>老化计时：</string>
    </property>
   </widget>
   <widget class="QTextEdit" name="reply_Edit">
@@ -227,6 +227,19 @@
      <width>171</width>
      <height>71</height>
     </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="LED_label">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>260</y>
+     <width>53</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
    </property>
   </widget>
  </widget>

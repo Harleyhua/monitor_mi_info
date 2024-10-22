@@ -148,6 +148,9 @@ Makefile: ../../monitor_mi_info.pro D:/Qt/5.15.2/mingw81_64/mkspecs/win32-g++/qm
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_insighttrackerqml_private.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_location.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_location_private.pri \
+		../../../../WeiNi_code/Mqtt/qtmqtt-5.15.2/build/Desktop_Qt_5_15_2_MinGW_64_bit-Release/mkspecs/modules-inst/qt_lib_mqtt.pri \
+		../../../../WeiNi_code/Mqtt/qtmqtt-5.15.2/build/Desktop_Qt_5_15_2_MinGW_64_bit-Release/mkspecs/modules-inst/qt_lib_mqtt_private.pri \
+		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_mqtt.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_multimedia.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_multimedia_private.pri \
 		D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_multimediawidgets.pri \
@@ -366,6 +369,9 @@ D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_insighttrackerqml.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_insighttrackerqml_private.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_location.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_location_private.pri:
+../../../../WeiNi_code/Mqtt/qtmqtt-5.15.2/build/Desktop_Qt_5_15_2_MinGW_64_bit-Release/mkspecs/modules-inst/qt_lib_mqtt.pri:
+../../../../WeiNi_code/Mqtt/qtmqtt-5.15.2/build/Desktop_Qt_5_15_2_MinGW_64_bit-Release/mkspecs/modules-inst/qt_lib_mqtt_private.pri:
+D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_mqtt.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_multimedia.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_multimedia_private.pri:
 D:/Qt/5.15.2/mingw81_64/mkspecs/modules/qt_lib_multimediawidgets.pri:

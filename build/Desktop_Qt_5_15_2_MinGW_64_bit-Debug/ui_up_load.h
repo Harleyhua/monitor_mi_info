@@ -31,9 +31,10 @@ public:
     QPushButton *Load_btn;
     QTextEdit *Show_Edit;
     QLabel *label_25;
-    QLineEdit *reply_Edit_2;
+    QLineEdit *Reply_Edit;
     QLabel *label_26;
     QTextEdit *reply_Edit;
+    QLabel *LED_label;
 
     void setupUi(QWidget *Up_load)
     {
@@ -54,7 +55,7 @@ public:
         Port_Edit->setFont(font);
         Connect_btn = new QPushButton(Up_load);
         Connect_btn->setObjectName(QString::fromUtf8("Connect_btn"));
-        Connect_btn->setGeometry(QRect(30, 250, 131, 41));
+        Connect_btn->setGeometry(QRect(30, 250, 101, 41));
         QFont font1;
         font1.setFamily(QString::fromUtf8("Microsoft Tai Le"));
         font1.setPointSize(12);
@@ -86,10 +87,10 @@ public:
         label_25->setObjectName(QString::fromUtf8("label_25"));
         label_25->setGeometry(QRect(770, 30, 121, 19));
         label_25->setFont(font1);
-        reply_Edit_2 = new QLineEdit(Up_load);
-        reply_Edit_2->setObjectName(QString::fromUtf8("reply_Edit_2"));
-        reply_Edit_2->setGeometry(QRect(770, 165, 171, 61));
-        reply_Edit_2->setFont(font);
+        Reply_Edit = new QLineEdit(Up_load);
+        Reply_Edit->setObjectName(QString::fromUtf8("Reply_Edit"));
+        Reply_Edit->setGeometry(QRect(770, 165, 171, 61));
+        Reply_Edit->setFont(font);
         label_26 = new QLabel(Up_load);
         label_26->setObjectName(QString::fromUtf8("label_26"));
         label_26->setGeometry(QRect(770, 140, 121, 19));
@@ -97,6 +98,9 @@ public:
         reply_Edit = new QTextEdit(Up_load);
         reply_Edit->setObjectName(QString::fromUtf8("reply_Edit"));
         reply_Edit->setGeometry(QRect(770, 60, 171, 71));
+        LED_label = new QLabel(Up_load);
+        LED_label->setObjectName(QString::fromUtf8("LED_label"));
+        LED_label->setGeometry(QRect(150, 260, 53, 15));
 
         retranslateUi(Up_load);
 
@@ -112,7 +116,8 @@ public:
         label_20->setText(QCoreApplication::translate("Up_load", "IP\345\234\260\345\235\200\357\274\232", nullptr));
         Load_btn->setText(QCoreApplication::translate("Up_load", "\345\212\240\350\275\275", nullptr));
         label_25->setText(QCoreApplication::translate("Up_load", "MES\345\233\236\344\274\240\344\277\241\346\201\257\357\274\232", nullptr));
-        label_26->setText(QCoreApplication::translate("Up_load", "MES\345\233\236\344\274\240\350\256\241\346\227\266\357\274\232", nullptr));
+        label_26->setText(QCoreApplication::translate("Up_load", "\350\200\201\345\214\226\350\256\241\346\227\266\357\274\232", nullptr));
+        LED_label->setText(QString());
     } // retranslateUi
 
 };
