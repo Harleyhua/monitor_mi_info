@@ -109,8 +109,8 @@ void scan_code::onScanIDTextEdited()
                             Position.clear();
 
                             QTableWidgetItem *newItem = new QTableWidgetItem(MiCid);
-                            if (rowIndex >= 0 && rowIndex < tableWidget->rowCount() &&
-                                columnIndex >= 0 && columnIndex < tableWidget->columnCount())
+                            if (rowIndex >= 0 && rowIndex <= tableWidget->rowCount() &&
+                                columnIndex >= 0 && columnIndex <= tableWidget->columnCount())
                             {
                                 tableWidget->setItem(rowIndex -1, columnIndex -1, newItem);
                             }
@@ -221,7 +221,8 @@ void scan_code::create_room_temp_js(room_strc status)
 void scan_code::showContextMenu(const QPoint &pos)
 {
     QTableWidget *tableWidget = qobject_cast<QTableWidget *>(sender());
-    if (tableWidget) {
+    if (tableWidget)
+    {
         QMenu menu(tableWidget);
         QAction *deleteAction = menu.addAction(tr("删除"));
         connect(deleteAction, &QAction::triggered, this, [this, tableWidget]() {

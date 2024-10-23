@@ -22,7 +22,7 @@ Up_load::Up_load(QWidget *parent)
     sent_timer = new QTimer(this);
     Hit_timer = new QTimer(this);
 
-    ui->IP_Edit->setText("192.168.7.237");
+    ui->IP_Edit->setText("47.97.180.36");
     ui->Port_Edit->setText("40032");
 
     ui->Show_Edit->resize(451, 800);
@@ -168,7 +168,7 @@ void Up_load::checkConnection()
 
 void Up_load::on_Start_btn_clicked()
 {
-    sent_timer->start(60000);
+    sent_timer->start(120000);
     ui->Start_btn->setEnabled(false);
     Hit_timer->start(1000);
 }

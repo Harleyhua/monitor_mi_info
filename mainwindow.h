@@ -6,8 +6,10 @@
 #include <QVBoxLayout>
 #include <QHeaderView>
 #include <QtNetwork/QTcpSocket>
-#include "up_load.h"
 #include <QThread>
+#include <QMessageBox>
+#include <QCloseEvent>
+#include "up_load.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -32,7 +34,24 @@ signals:
 
 private slots:
 
+
+protected:
+    void closeEvent(QCloseEvent *event) override
+    {
+        QMessageBox::StandardButton res = QMessageBox::question(this, "退出系统","是否要退出本系统?",
+                                                                QMessageBox::Yes|QMessageBox::No,QMessageBox::No);
+        if (res == QMessageBox::Yes)
+        {
+            event->accept();
+        }
+        else
+        {
+            event->ignore();
+        }
+    }
+
 private:
     Ui::MainWindow *ui;
+
 };
 #endif // MAINWINDOW_H
